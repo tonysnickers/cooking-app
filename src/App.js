@@ -2,7 +2,8 @@ import Home from "./Home";
 
 function App() {
   return (
-    <div className="App">
+    <div className="app-container">
+      <h1>React Cooking App</h1>
       <Home/>
     </div>
   );
