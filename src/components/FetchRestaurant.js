@@ -1,11 +1,8 @@
 import axios from 'axios'
 import React, { useEffect } from 'react'
 import RestaurantsLists from './RestaurantsLists'
-import Card from '@mui/material/Card'
-import CardContent from '@mui/material/CardContent'
-import CardMedia from '@mui/material/CardMedia'
-import Typography from '@mui/material/Typography'
-import { CardActionArea } from '@mui/material'
+import { Grid } from '@mui/material'
+import { Container } from '@mui/system'
 
 const FetchRestaurant = ({ setRestaurants, restaurants }) => {
   useEffect(() => {
@@ -14,15 +11,15 @@ const FetchRestaurant = ({ setRestaurants, restaurants }) => {
       .then((res) => setRestaurants(res.data.meals))
   })
   return (
-    <div>
+    <Container sx={{ marginTop: '60px' }}>
+      <Grid container spacing={5}>
         {restaurants.map((restaurant) => (
-      <Card sx={{ maxWidth: 345 }}>
-          <CardActionArea>
+          <Grid item xs={4}>
             <RestaurantsLists restaurant={restaurant} />
-          </CardActionArea>
-      </Card>
-            ))}
-    </div>
+          </Grid>
+        ))}
+      </Grid>
+    </Container>
   )
 }
 
