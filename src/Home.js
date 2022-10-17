@@ -1,31 +1,19 @@
 import React, { useState } from 'react'
 import FetchRestaurant from './components/FetchRestaurant'
+import Form from './components/Form'
 
 const Home = () => {
-  const [restaurants, setRestaurants] = useState([])
+  const [meals, setMeals] = useState([])
+  const [inputValue, setInputValue] = useState("")
+
   return (
     <div>
-      <FetchRestaurant setRestaurants={setRestaurants} restaurants={restaurants} />
+      <Form setInputValue={setInputValue}/>
+      <FetchRestaurant setMeals={setMeals} meals={meals}  inputValue={inputValue}/>
     </div>
   )
 }
 
 export default Home
 
-// const Home = () => {
-//   const [restaurants, setRestaurants] = useState([])
-//   return (
-//     <div>
-//       {/* <ul>
-//         {restaurants.map((restaurant) => (
-//           <li>
-//             {restaurant.strMeal}
-//             {restaurant.strInstructions}
-//             <img src={restaurant.strMealThumb} alt="" />
-//           </li>
-//         ))}
-//       </ul>
-//       <FetchRestaurant setRestaurants={setRestaurants} /> */}
-//     </div>
-//   )
-// }
+
