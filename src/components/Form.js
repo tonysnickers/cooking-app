@@ -1,12 +1,10 @@
 import React, { useState } from 'react'
-import Box from '@mui/material/Box'
-import TextField from '@mui/material/TextField'
 
 const Form = ({ setInputValue }) => {
   const handlesubmit = (e) => {
     e.preventDefault()
     setInputValue(e.target.value)
-    
+
   }
 
   return (
