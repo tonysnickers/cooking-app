@@ -22,7 +22,7 @@ const RestaurantsLists = ({ meal, handleLike, isLiked }) => {
 
   return (
     <Card>
-      <Link to={`meal/${meal.idMeal}`}>
+      <Link to={`meal/${meal.idMeal}`} style={{textDecoration: "none"}}>
         <CardActionArea>
           <Typography
             gutterBottom
