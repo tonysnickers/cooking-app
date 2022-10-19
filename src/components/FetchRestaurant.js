@@ -14,7 +14,7 @@ const FetchRestaurant = ({ setMeals, meals, inputValue, handleLike, isLiked }) =
     <Container sx={{ marginTop: '10px', marginBottom: "20px" }}>
       <Grid container spacing={5}>
         {meals && meals.map((meal) => (
-          <Grid item xs={4} key={meal.idMeal} >
+          <Grid item xs={12} sm={6} lg={4}  key={meal.idMeal} >
             <RestaurantsLists meal={meal}
             handleLike={handleLike}
             isLiked={isLiked}/>
